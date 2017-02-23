@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">WdPlyCollect</string>
+    <string name="home_item_accuracy">正确率%d%%</string>
+</resources>
