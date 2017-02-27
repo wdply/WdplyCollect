@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.example.ply.wdplycollect.R;
 import com.example.ply.wdplycollect.activity.dashboard.DashBoardActivity;
 import com.example.ply.wdplycollect.activity.linechart.LineChartActivity;
+import com.example.ply.wdplycollect.activity.localstorage.LocalStorageActivity;
 import com.example.ply.wdplycollect.activity.multileveltree.MultilTreeActivity;
 import com.example.ply.wdplycollect.activity.tablayout.TabLayoutActivity;
 import com.example.ply.wdplycollect.activity.topology.TopoLogyActivity;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             list.add("遥感图");
             list.add("拓扑图");
             list.add("标签自适应");
+            list.add("本地存储");
         }
 
         @Override
@@ -72,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
                         TopoLogyActivity.newIntent(context);
                     } else if ("标签自适应".equals(list.get(position))) {
                         TabLayoutActivity.newIntent(context);
+                    } else if ("本地存储".equals(list.get(position))) {
+                        LocalStorageActivity.newIntent(context);
                     }
                 }
             });

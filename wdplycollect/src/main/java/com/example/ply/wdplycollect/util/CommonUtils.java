@@ -28,6 +28,10 @@ import android.util.DisplayMetrics;
 import android.widget.Toast;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -358,5 +362,145 @@ public class CommonUtils {
             //WIFI已断开,移动数据已断开
         }
         return false;
+    }
+
+    /**
+     * 内部存储
+     *
+     * @param filePath 路径
+     */
+    public static void setLocalData(String filePath, String str) {
+        FileOutputStream outputStream = null;
+        File file = new File(filePath);
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        try {
+            outputStream = new FileOutputStream(file);
+            if (outputStream != null) {
+                outputStream.write(str.getBytes());
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (outputStream != null) {
+                try {
+                    outputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    /**
+     * 获取内存存储
+     *
+     * @param filePath
+     * @return
+     */
+    public static String getLocalData(String filePath) {
+        FileInputStream inputStream;
+        File file = new File(filePath);
+        int len;
+        byte[] bt = new byte[1024];
+        StringBuffer stringBuffer = new StringBuffer();
+        if (!file.exists()) {
+            return null;
+        }
+        try {
+            inputStream = new FileInputStream(file);
+            if (inputStream != null) {
+                while ((len = inputStream.read(bt)) != -1) {
+                    stringBuffer.append(new String(bt, 0, len));
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            return stringBuffer.toString();
+        }
+    }
+
+    /**
+     * 本地SD卡存储
+     *
+     * @param filePath
+     */
+    public static void saveSdCardData(String filePath, String str) {
+        //判断sdk是否存在(必须的)
+        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+            FileOutputStream outputStream = null;
+            File file = new File(filePath);
+            if (!file.exists()) {
+                try {
+                    file.createNewFile();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            try {
+                outputStream = new FileOutputStream(file);
+                if (outputStream != null) {
+                    outputStream.write(str.getBytes());
+                }
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (outputStream != null) {
+                    try {
+                        outputStream.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * 获取SD数据
+     *
+     * @param filePath
+     * @return
+     */
+    public static String getSdCardData(String filePath) {
+        //判断文件是否存在
+        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+            FileInputStream inputStream;
+            File file = new File(filePath);
+            int len;
+            byte[] bt = new byte[1024];
+            StringBuffer stringBuffer = new StringBuffer();
+            if (!file.exists()) {
+                return null;
+            }
+            try {
+                inputStream = new FileInputStream(file);
+                if (inputStream != null) {
+                    while ((len = inputStream.read(bt)) != -1) {
+                        stringBuffer.append(new String(bt, 0, len));
+                    }
+                }
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                return stringBuffer.toString();
+            }
+        } else {
+            return null;
+        }
     }
 }

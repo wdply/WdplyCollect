@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="83662574463cfa31a59a0c871d1e0456392d993e">
+        sha1="af79ff67ccabe2ce3978aee0a4f4f184c7ed3bab">
         <dex dex="E:\huatu_work\androidStudioProject\WdPlyCollect\wdplycollect\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_e073b23bb6411e12c7767a105524b5b577f79599\classes.dex" />
     </item>
     <item
@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="03042152a826e766fbed1b5d9b354325f07e0325">
+        sha1="7af585330e3dedac40075740ef7834b2c504b3c1">
         <dex dex="E:\huatu_work\androidStudioProject\WdPlyCollect\wdplycollect\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_aeb243f05a416344f462e213454a9a02c01f7b9a\classes.dex" />
     </item>
     <item
