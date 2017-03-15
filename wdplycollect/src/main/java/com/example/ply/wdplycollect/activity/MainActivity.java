@@ -12,12 +12,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.ply.wdplycollect.R;
-import com.example.ply.wdplycollect.activity.dashboard.DashBoardActivity;
-import com.example.ply.wdplycollect.activity.linechart.LineChartActivity;
+import com.example.ply.wdplycollect.activity.canvas.CanvasDemoActivity;
 import com.example.ply.wdplycollect.activity.localstorage.LocalStorageActivity;
 import com.example.ply.wdplycollect.activity.multileveltree.MultilTreeActivity;
 import com.example.ply.wdplycollect.activity.tablayout.TabLayoutActivity;
-import com.example.ply.wdplycollect.activity.topology.TopoLogyActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,11 +42,9 @@ public class MainActivity extends AppCompatActivity {
 
         public RecyclerviewAdapter(Context context) {
             this.context = context;
-            list.add("章节树");
-            list.add("折线图");
-            list.add("遥感图");
-            list.add("拓扑图");
-            list.add("标签自适应");
+            list.add("multilevelTree");
+            list.add("canvasDemo");
+            list.add("tabView");
             list.add("本地存储");
         }
 
@@ -64,14 +60,10 @@ public class MainActivity extends AppCompatActivity {
             holder.rl_root.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if ("章节树".equals(list.get(position))) {
+                    if ("multilevelTree".equals(list.get(position))) {
                         MultilTreeActivity.newIntent(context);
-                    } else if ("折线图".equals(list.get(position))) {
-                        LineChartActivity.newIntent(context);
-                    } else if ("遥感图".equals(list.get(position))) {
-                        DashBoardActivity.newIntent(context);
-                    } else if ("拓扑图".equals(list.get(position))) {
-                        TopoLogyActivity.newIntent(context);
+                    } else if ("canvasDemo".equals(list.get(position))) {
+                        CanvasDemoActivity.newIntent(context);
                     } else if ("标签自适应".equals(list.get(position))) {
                         TabLayoutActivity.newIntent(context);
                     } else if ("本地存储".equals(list.get(position))) {

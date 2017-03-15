@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="GraphView">
+    <declare-styleable name="DrawCharLineView">
         <attr name="textSizeVertical" format="dimension"/>
         <attr name="spaceVertical" format="dimension"/>
         <attr name="textSizeHorizontal" format="dimension"/>

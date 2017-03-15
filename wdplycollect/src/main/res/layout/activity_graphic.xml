@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--//canvas样例-->
+    <com.example.ply.wdplycollect.activity.canvas.DrawDemoView
+        android:id="@+id/drawDemoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--&lt;!&ndash;路径样式&ndash;&gt;-->
+    <!--<com.example.ply.wdplycollect.activity.canvas.DrawPathStyleView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" />-->
+    <!--&lt;!&ndash;路径文本&ndash;&gt;-->
+    <!--<com.example.ply.wdplycollect.activity.canvas.DrawPathTextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" />-->
+    <!--&lt;!&ndash;画板&ndash;&gt;-->
+    <!--<com.example.ply.wdplycollect.activity.canvas.DrawPathLineView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+</com.zhy.android.percent.support.PercentLinearLayout>

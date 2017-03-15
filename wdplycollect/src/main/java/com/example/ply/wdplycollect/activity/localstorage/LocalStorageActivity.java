@@ -3,7 +3,10 @@ package com.example.ply.wdplycollect.activity.localstorage;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.ply.wdplycollect.R;
 import com.example.ply.wdplycollect.util.CommonUtils;
@@ -36,6 +39,21 @@ public class LocalStorageActivity extends Activity {
         CommonUtils.saveSdCardData(path3, text);//保存数据
         String content = CommonUtils.getSdCardData(path3);//读取数据
         CommonUtils.showToast(this, content);
+
+        //数据库存储
+        DBHelper dbHelper = new DBHelper(this);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        db.execSQL("insert into wdply values(null,?,?,?,?)", new Object[]{"小明", 1, "男", "159"});
+        db.execSQL("update wdply set sex=? where name=?", new Object[]{"女", "小明"});
+        db.execSQL("delete from wdply where name=?", new Object[]{"小明"});
+        db.execSQL("delete from wdply");
+        Cursor cursor = db.rawQuery("select * from wdply", null);
+        for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+            String name = cursor.getString(1);
+            int age = cursor.getInt(2);
+            String sex = cursor.getString(3);
+            Log.i("tag", "姓名:" + name + "年龄：" + age + "性别:" + sex);
+        }
     }
 
     public static void newIntent(Context context) {

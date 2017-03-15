@@ -26,19 +26,13 @@
             android:name=".activity.multileveltree.MultilTreeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.linechart.LineChartActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.dashboard.DashBoardActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.topology.TopoLogyActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".activity.tablayout.TabLayoutActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.localstorage.LocalStorageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.canvas.CanvasDemoActivity"
             android:screenOrientation="portrait" />
     </application>
 
