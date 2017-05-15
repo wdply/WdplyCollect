@@ -27,7 +27,7 @@ public class MultilTreeActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_multiltree);
 
         multilevelTreeAdapter = new MultilevelTreeAdapter(this);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);

@@ -3,4 +3,5 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="width_1">1px</dimen>
+    <dimen name="top_bar">48dp</dimen>
 </resources>

@@ -34,7 +34,6 @@ public class MultilevelTreeAdapter extends RecyclerView.Adapter<MultilevelTreeAd
     public MultilevelTreeHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new MultilevelTreeHolder(LayoutInflater.from(mContext).inflate(R.layout.item_multilevel_tree, parent, false));
     }
-
     @Override
     public void onBindViewHolder(MultilevelTreeHolder holder, int position) {
         final MultilevelTreeBean bean = mList.get(position);
@@ -44,9 +43,10 @@ public class MultilevelTreeAdapter extends RecyclerView.Adapter<MultilevelTreeAd
         switch (bean.level) {
             case 0:
                 if (bean.expand) {
-                    holder.line_top.setVisibility(View.INVISIBLE);
+                     holder.line_top.setVisibility(View.INVISIBLE);
                     holder.line_bottom.setVisibility(View.VISIBLE);
                     holder.line_divider.setVisibility(View.INVISIBLE);
+
                     holder.iv_level_1.setImageResource(R.drawable.icon_expand_1);
                 } else {
                     holder.line_top.setVisibility(View.INVISIBLE);

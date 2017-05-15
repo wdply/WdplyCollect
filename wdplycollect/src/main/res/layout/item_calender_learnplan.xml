@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4c000000"
+    android:id="@+id/rl_pop">
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/materialCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:mcv_arrowColor="@color/transparent"
+        app:mcv_leftArrowMask="@drawable/arrow_left_type6"
+        app:mcv_rightArrowMask="@drawable/arrow_right_type6"
+        app:mcv_selectionColor="#ffdbca"
+        app:mcv_tileHeight="34dp"
+        app:mcv_type="1"
+        app:mcv_weekDayLabels="@array/custom_weekdays"
+        android:paddingTop="10dp"/>
+
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_above="@id/materialCalendar"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/divider_above_tab_index"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_above="@id/v_line"
+            android:gravity="center"
+            android:paddingLeft="13dp"
+            android:text="取消"
+            android:textColor="@color/shopingcart_textcolor"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_above="@id/v_line"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="共0天"
+            android:textColor="@color/shopingcart_textcolor"
+            android:textSize="15sp"
+            android:id="@+id/tv_pop_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_above="@id/v_line"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingRight="13dp"
+            android:text="确定"
+            android:textColor="@color/wx_green"
+            android:textSize="13sp"
+            android:id="@+id/tv_confirm"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

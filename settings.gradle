@@ -1,1 +1,1 @@
-include ':wdplycollect'
+include ':wdplycollect', ':material-calendarview'

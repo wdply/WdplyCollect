@@ -5,6 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="gray0">#d4d4d4</color>
     <color name="white">#ffffff</color>
+    <color name="white002">#f6f6f7</color>
     <color name="line_divider_index_page">#d4d4d4</color>
     <color name="bg_gray001">#6e6e6e</color>
     <color name="gray001">#d7d7d7</color>
@@ -17,6 +18,7 @@
     <color name="bg_gray008">#333333</color>
     <color name="bg_green007">#a0ecdb</color>
     <color name="bg_gray012">#d1d1d1</color>
+    <color name="bg_gray029">#e5e5e5</color>
     <color name="red_002">#e94b35</color>
     <color name="orange_002">#f2c500</color>
     <color name="bg_green006">#00bd9c</color>
@@ -25,4 +27,9 @@
     <color name="red_003">#33f4348a</color>
     <color name="red_004">#f4348a</color>
     <color name="comment_txtcolor">#aaaaaa</color>
+    <color name="gainsboro">#dcdcdc</color><!--淡灰色 -->
+    <color name="tv_ordercommit">#787878</color>
+    <color name="transparent">#0000</color><!-- 透明 -->
+    <color name="divider_above_tab_index">#dadada</color>
+    <color name="wx_green">#ff00b38a</color>
 </resources>
